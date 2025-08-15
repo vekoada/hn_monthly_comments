@@ -1,0 +1,177 @@
+:root {
+    --bg-color: #F8F6F2;
+    --text-color: #4A4A4A;
+    --title-color: #2c2c2c;
+    --accent-color: #FF6600; /* Hacker News Orange */
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+#vis-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--title-color);
+    margin: 0 0 10px 0;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#legend {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+#chart {
+    position: relative;
+    height: 500px;
+}
+
+.axis path,
+.axis line {
+    stroke: none;
+}
+
+.axis text {
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    fill: #999;
+    font-weight: 400;
+}
+
+.grid-line {
+    stroke: #e0e0e0;
+    stroke-width: 1px;
+    stroke-dasharray: 3,3;
+}
+
+#tooltip {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 15px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    min-width: 180px;
+}
+
+#tooltip h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--title-color);
+}
+
+.tooltip-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+.tooltip-item:first-of-type {
+    border-top: none;
+}
+
+.tooltip-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tooltip-value {
+    font-weight: 500;
+}
+
+.tooltip-line {
+    stroke: var(--accent-color);
+    stroke-width: 1.5px;
+}
+
+/* --- Footer --- */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    opacity: 0.8;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #E55B00;
+}
+
+.footer-text {
+    text-align: left;
+}
+
+.footer-text p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--title-color);
+}
+
+.footer-text span {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
