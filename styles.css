@@ -175,3 +175,25 @@ footer {
     font-weight: 300;
     font-size: 0.9rem;
 }
+
+.disclaimer {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: #999;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.disclaimer a {
+    color: #777;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+}
+
+.disclaimer a:hover {
+    color: var(--accent-color);
+}
