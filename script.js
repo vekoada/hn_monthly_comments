@@ -230,8 +230,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const chartData = data_string.trim().split('\n').slice(1).map(row => {
         const [month, comments] = row.split('\t');
+        const [year, monthNum] = month.split('-');
         return {
-            date: new Date(month),
+            date: new Date(year, monthNum - 1),
             value: +comments
         };
     });
